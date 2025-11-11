@@ -5,6 +5,16 @@ function PerformerPage() {
   //Страница исполнителя для клиента
   const params = useParams<PathParams[typeof ROUTES.PERFORMER]>();
   const navigate = useNavigate();
+
+  // const performersList = [
+  //   {
+  //     id: 1,
+  //     name: "Кристина",
+  //     description: "Делаю крутые ногти",
+  //     avatar:
+  //   },
+  // ];
+
   return (
     <div>
       <button onClick={() => navigate(ROUTES.PERFORMERS)}>Back</button>

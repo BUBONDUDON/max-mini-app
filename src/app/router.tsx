@@ -11,20 +11,25 @@ export const router = createBrowserRouter([
         loader: () => redirect(ROUTES.PERFORMERS),
       },
       {
-        path: ROUTES.LOGIN,
+        path: ROUTES.LOGIN, // регистрация
         lazy: () => import("@/features/auth/index.tsx"),
       },
       {
-        path: ROUTES.WORKER,
+        path: ROUTES.WORKER, // заполнение профиля
         lazy: () => import("@/features/worker/worker.page"),
       },
       {
-        path: ROUTES.PERFORMERS,
+        path: ROUTES.WORKERPAGE, // просмотр своего профиля
+        lazy: () =>
+          import("@/features/worker/workerProfile/workerProfilePage.tsx"),
+      },
+      {
+        path: ROUTES.PERFORMERS, // список мастеров
         lazy: () =>
           import("@/features/client/performers-list/performers-list.page"),
       },
       {
-        path: ROUTES.PERFORMER,
+        path: ROUTES.PERFORMER, // конкретный мастер
         lazy: () => import("@/features/client/performer/performer.page"),
       },
       {

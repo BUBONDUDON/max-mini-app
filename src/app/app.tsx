@@ -1,13 +1,8 @@
-import { Outlet, useLocation } from "react-router-dom";
-import { AppHeader } from "@/features/header";
-import { ROUTES } from "@/shared/model/routes";
-export function App() {
-  const location = useLocation();
+import { Outlet } from "react-router-dom";
 
-  const isAuthPage = location.pathname === ROUTES.LOGIN;
+export function App() {
   return (
-    <div>
-      {isAuthPage && <AppHeader />}
+    <div className="container">
       <Outlet />
     </div>
   );
